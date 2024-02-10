@@ -8,8 +8,6 @@ const deleteBtn = document.getElementById("delete") as HTMLButtonElement;
 const input = document.getElementById("input") as HTMLInputElement;
 const display = document.querySelector(".display") as HTMLDivElement;
 
-input.focus();
-
 const handleOverflow = () => {
   if (wrapper) {
     const isOverflowing = wrapper.offsetWidth < input.scrollWidth;
@@ -30,12 +28,10 @@ numbers.forEach((number) => {
 reset?.addEventListener("click", () => {
   input.value = "";
   display.textContent = "";
-  input.focus();
 });
 
 deleteBtn?.addEventListener("click", () => {
   input.value = input.value.slice(0, -1);
-  input.focus();
   if (input.value.length === 0) {
     display.textContent = "";
   }
