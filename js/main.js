@@ -7,7 +7,6 @@ const equal = document.getElementById("equal");
 const deleteBtn = document.getElementById("delete");
 const input = document.getElementById("input");
 const display = document.querySelector(".display");
-input.focus();
 const handleOverflow = () => {
     if (wrapper) {
         const isOverflowing = wrapper.offsetWidth < input.scrollWidth;
@@ -26,11 +25,9 @@ numbers.forEach((number) => {
 reset === null || reset === void 0 ? void 0 : reset.addEventListener("click", () => {
     input.value = "";
     display.textContent = "";
-    input.focus();
 });
 deleteBtn === null || deleteBtn === void 0 ? void 0 : deleteBtn.addEventListener("click", () => {
     input.value = input.value.slice(0, -1);
-    input.focus();
     if (input.value.length === 0) {
         display.textContent = "";
     }
@@ -67,6 +64,17 @@ equal.addEventListener("click", () => {
     if (input.value.length === 0)
         return;
     display.textContent = input.value + "=";
-    const result = eval(input.value);
-    input.value = result;
+    try {
+        const result = eval(input.value);
+        const formattedResult = new Intl.NumberFormat("en-IN", {
+            style: "currency",
+            currency: "INR",
+        }).format(result);
+        input.value = formattedResult.endsWith(".00")
+            ? formattedResult.slice(1, -3)
+            : formattedResult.slice(1);
+    }
+    catch (error) {
+        alert(error);
+    }
 });

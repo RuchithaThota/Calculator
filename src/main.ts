@@ -69,8 +69,14 @@ equal.addEventListener("click", () => {
   if (input.value.length === 0) return;
   display.textContent = input.value + "=";
   try {
-    const result: string = eval(input.value);
-    input.value = result;
+    const result = eval(input.value);
+    const formattedResult = new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+    }).format(result);
+    input.value = formattedResult.endsWith(".00")
+      ? formattedResult.slice(1, -3)
+      : formattedResult.slice(1);
   } catch (error) {
     alert(error);
   }
