@@ -72,6 +72,10 @@ function getLastSubstringAfterLastOperator(input: string): string {
 equal.addEventListener("click", () => {
   if (input.value.length === 0) return;
   display.textContent = input.value + "=";
-  const result: string = eval(input.value);
-  input.value = result;
+  try {
+    const result: string = eval(input.value);
+    input.value = result;
+  } catch (error) {
+    alert(error);
+  }
 });
