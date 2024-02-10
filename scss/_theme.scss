@@ -1,0 +1,54 @@
+:root[data-theme="theme-1"] {
+  --body-bg: hsl(222, 26%, 31%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --theme-toggle-bg: hsl(223, 31%, 20%);
+  --key-bg: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
+  --key-color: hsl(221, 14%, 31%);
+  --second-key-bg: hsl(225, 21%, 49%);
+  --second-key-shadow: hsl(224, 28%, 35%);
+  --second-key-color: #fff;
+  --third-key-bg: hsl(6, 63%, 50%);
+  --third-key-shadow: hsl(6, 70%, 34%);
+  --third-key-color: #fff;
+  --active-theme: hsl(6, 63%, 50%);
+  --head-color: #fff;
+  --input-color: #fff;
+}
+:root[data-theme="theme-2"] {
+  --body-bg: hsl(0, 0%, 90%);
+  --keypad-bg: hsl(0, 5%, 81%);
+  --screen-bg: hsl(0, 0%, 93%);
+  --theme-toggle-bg: hsl(0, 5%, 81%);
+  --key-bg: hsl(45, 7%, 89%);
+  --key-shadow: hsl(35, 11%, 61%);
+  --key-color: hsl(60, 10%, 19%);
+  --second-key-bg: hsl(185, 42%, 37%);
+  --second-key-shadow: hsl(185, 58%, 25%);
+  --second-key-color: #fff;
+  --third-key-bg: hsl(25, 98%, 40%);
+  --third-key-shadow: hsl(25, 99%, 27%);
+  --third-key-color: #fff;
+  --active-theme: hsl(6, 63%, 50%);
+  --head-color: hsl(60, 10%, 19%);
+  --input-color: hsl(60, 10%, 19%);
+}
+:root[data-theme="theme-3"] {
+  --body-bg: hsl(268, 75%, 9%);
+  --keypad-bg: hsl(268, 71%, 12%);
+  --screen-bg: hsl(268, 71%, 12%);
+  --theme-toggle-bg: hsl(268, 71%, 12%);
+  --key-bg: hsl(268, 47%, 21%);
+  --key-shadow: hsl(290, 70%, 36%);
+  --key-color: hsl(52, 100%, 62%);
+  --second-key-bg: hsl(281, 89%, 26%);
+  --second-key-shadow: hsl(285, 91%, 52%);
+  --second-key-color: hsl(0, 0%, 100%);
+  --third-key-bg: hsl(176, 100%, 44%);
+  --third-key-shadow: hsl(177, 92%, 70%);
+  --third-key-color: hsl(198, 20%, 13%);
+  --head-color: hsl(52, 100%, 62%);
+  --input-color: hsl(52, 100%, 62%);
+  --active-theme: hsl(176, 100%, 44%);
+}

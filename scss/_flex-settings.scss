@@ -1,0 +1,14 @@
+@mixin flex-settings($element) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @if ($element== "header-cont" or $element== "theme-numbers") {
+    justify-content: space-between;
+  }
+  @if ($element== "theme-cont") {
+    justify-content: flex-end;
+  }
+  @if ($element== "theme-bg") {
+    justify-content: space-around;
+  }
+}
