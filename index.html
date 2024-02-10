@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="theme-1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./images/favicon-32x32.png">
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/theme.js"></script>
+</head>
+
+<body>
+    <div class="calc__main-cont">
+        <div class="calc__header-cont">
+            <h1 class="primary-heading">calc</h1>
+            <div class="calc__theme-cont">
+                <p>Theme</p>
+                <div class="theme">
+                    <div class="theme__counter">
+                        <div class="theme__counter-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                    </div>
+                    <div class="theme__bg">
+                        <span id="theme-1">
+                        </span>
+                        <span id="theme-2">
+                        </span>
+                        <span id="theme-3">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calc__screen-cont">
+            <div class="display"></div>
+            <input type="text" id="input">
+        </div>
+        <div class="calc__keypad-cont">
+            <div class="keys">
+                <button class="key number">7</button>
+                <button class="key number">8</button>
+                <button class="key number">9</button>
+                <button class="key" id="delete">DEL</button>
+                <button class="key number">4</button>
+                <button class="key number">5</button>
+                <button class="key number">6</button>
+                <button class="key operator" id="plus">+</button>
+                <button class="key number">1</button>
+                <button class="key number">2</button>
+                <button class="key number">3</button>
+                <button class="key operator" id="minus">-</button>
+                <button class="key operator" id="decimal">.</button>
+                <button class="key number">0</button>
+                <button class="key operator" id="division">/</button>
+                <button class="key operator" id="multiply">*</button>
+                <button class="key" id="reset">RESET</button>
+                <button class="key" id="equal">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
